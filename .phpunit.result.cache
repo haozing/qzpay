@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":282:{a:2:{s:7:"defects";a:2:{s:48:"Haozi\Qzpay\Tests\QzpayTest::testsubmitOrderInfo";i:4;s:43:"Haozi\Qzpay\Tests\QzpayTest::testqueryOrder";i:3;}s:5:"times";a:2:{s:48:"Haozi\Qzpay\Tests\QzpayTest::testsubmitOrderInfo";d:0.899;s:43:"Haozi\Qzpay\Tests\QzpayTest::testqueryOrder";d:0.682;}}}

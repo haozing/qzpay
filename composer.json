@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Haozi\\Qzpay\\": "./src"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^8.4",
+        "mockery/mockery": "^1.2"
+    }
+}
