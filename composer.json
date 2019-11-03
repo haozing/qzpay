@@ -1,4 +1,13 @@
 {
+    "name": "haozi/qzpay",
+    "description": "中国银联条码支付综合前置平台[微信公众号支付]",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "haozing",
+            "email": "570193025@qq.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Haozi\\Qzpay\\": "./src"
