@@ -2,6 +2,9 @@
 
 <p align="center"> 中国银联条码支付综合前置平台</p>
 
+#### 文档地址：
+https://up.95516.com/open/openapi?code=unionpay
+
 
 ## Installing
 
@@ -10,7 +13,9 @@ $ composer require haozi/qzpay -vvv
 ```
 
 ## Usage
-提交订单：
+
+### 【微信】公众号&小程序支付
+#### 提交订单：
 ```php
         $config = array(
             'url'=>'https://qra.95516.com/pay/gateway',//支付请求接口地址，无需更改 
@@ -34,7 +39,7 @@ $ composer require haozi/qzpay -vvv
         //提交订单
         $res = $q->submitOrderInfo($order);
 ```
-查询订单：
+#### 查询订单：
 ```php
         $config = array(
             'url'=>'https://qra.95516.com/pay/gateway',//支付请求接口地址，无需更改 
@@ -57,7 +62,7 @@ $ composer require haozi/qzpay -vvv
         $res = $q->queryOrder($order);
 ```
 
-回调：
+#### 回调：
 ```php
 
         //回调地址接收信息
