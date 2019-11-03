@@ -1,6 +1,6 @@
 <h1 align="center"> qzpay </h1>
 
-<p align="center"> A  条码支付综合前置平台.</p>
+<p align="center"> 中国银联条码支付综合前置平台</p>
 
 
 ## Installing
