@@ -10,9 +10,52 @@ $ composer require haozi/qzpay -vvv
 ```
 
 ## Usage
+提交订单：
+```php
+        $config = array(
+            'url'=>'https://qra.95516.com/pay/gateway',//支付请求接口地址，无需更改 
+            'mch_id'=>'',//商户号
+            'key'=>'',  //密钥
+            'version'=>'2.0',//版本
+            'sign_type'=>'MD5',//加密方式
+            'notify_url'=>'',//通知地址，必填项，接收平台通知的URL，
+            'sub_appid'=>'',//对应公众号appid，必填
+            'sub_openid'=>'',//对应公众号获取到的用户openid
+        );
 
-TODO
+        $order = array(
+            'out_trade_no'=>date('YmdHis').mt_rand(1000, 9999),//商户订单号
+            'body'=>"124324",//商品描述
+            'total_fee'=>12,//总金额 单位：分
+            'mch_create_ip'=>"123.12.12.123",//ip
 
+        );
+        $q = new Qzpay($config);
+        //提交订单
+        $res = $q->submitOrderInfo($order);
+```
+查询订单：
+```php
+        $config = array(
+            'url'=>'https://qra.95516.com/pay/gateway',//支付请求接口地址，无需更改 
+            'mch_id'=>'',//商户号
+            'key'=>'',  //密钥
+            'version'=>'2.0',//版本
+            'sign_type'=>'MD5',//加密方式
+            'notify_url'=>'',//通知地址，必填项，接收平台通知的URL，
+            'sub_appid'=>'',//对应公众号appid，必填
+            'sub_openid'=>'',//对应公众号获取到的用户openid
+        );
+
+        $order = array(
+            'out_trade_no'=>"",//商户订单号
+            'transaction_id'=>"",//平台订单号
+
+        );
+        $q = new Qzpay($config);
+        //查询订单
+        $res = $q->queryOrder($order);
+```
 ## Contributing
 
 You can contribute in one of three ways:
