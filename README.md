@@ -56,6 +56,29 @@ $ composer require haozi/qzpay -vvv
         //查询订单
         $res = $q->queryOrder($order);
 ```
+
+回调：
+```php
+
+        //回调地址接收信息
+        $xml = file_get_contents('php://input');
+        $config = array(
+            'url'=>'https://qra.95516.com/pay/gateway',//支付请求接口地址，无需更改 
+            'mch_id'=>'',//商户号
+            'key'=>'',  //密钥
+            'version'=>'2.0',//版本
+            'sign_type'=>'MD5',//加密方式
+            'notify_url'=>'',//通知地址，必填项，接收平台通知的URL，
+            'sub_appid'=>'',//对应公众号appid，必填
+            'sub_openid'=>'',//对应公众号获取到的用户openid
+        );
+        $q = new Qzpay($config);
+        //回调
+        $res = $q->callback($xml);
+        //response 返回给网关信息
+        echo $res;//这个地方根据不同框架，自行设计返回。
+
+```
 ## Contributing
 
 You can contribute in one of three ways:
