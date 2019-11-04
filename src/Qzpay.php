@@ -236,12 +236,12 @@ class Qzpay
                 //echo $this->resHandler->getParameter('status');
                 // 11;
                 //更改订单状态
-                return 'success';
+                return $this->resHandler->getAllParameters();
             }else{
-                return 'failure';
+                return false;
             }
         }else{
-            return 'failure';
+            return false;
         }
     }
 }
